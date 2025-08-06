@@ -1,0 +1,16 @@
+local char = game.Players.LocalPlayer.Character
+local cdVal = PUT_DESIRED_COOLDOWN_VALUE_HERE
+local function cdStart()
+    for _, tool in ipairs(char:GetChildren()) do
+        if tool:IsA("Tool") then
+            tool.Cooldown.Value = cdVal
+            tool.Cooldown2.Value = cdVal
+            break
+        end
+    end
+end
+while true do
+    cdStart()
+    task.wait(1)
+    cdStart()
+end
