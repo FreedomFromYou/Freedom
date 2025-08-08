@@ -1,5 +1,5 @@
 local char = game.Players.LocalPlayer.Character
-local cdVal = PUT_DESIRED_COOLDOWN_VALUE_HERE
+local cdVal = PUT_DESIRED_COOLDOWN_VALUE_HERE --switch out this for the tool cooldown that you want
 local function cdStart()
     for _, tool in ipairs(char:GetChildren()) do
         if tool:IsA("Tool") then
